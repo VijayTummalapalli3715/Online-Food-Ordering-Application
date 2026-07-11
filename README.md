@@ -8,10 +8,10 @@ A responsive online food ordering frontend built with **HTML, CSS, JavaScript, a
 
 ```
 food-ordering-app/
-├── index.html          # User dashboard / menu page (photo hero, no hardcoded data)
-├── about.html           # About Us (separate page)
-├── contact.html         # Contact Us with validated form (separate page)
-├── login.html            # Admin login page (kitchen photo background)
+├── index.html          # User dashboard / menu page 
+├── about.html           # About Us 
+├── contact.html         # Contact Us with validated form 
+├── login.html            # Admin login page 
 ├── css/
 │   └── styles.css      # Custom components on top of Tailwind
 ├── js/
