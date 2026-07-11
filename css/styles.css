@@ -1,0 +1,307 @@
+/* ============================================================
+   Bite Bazaar — custom styles (Task 3)
+   Layout utilities come from Tailwind CSS; everything here is
+   hand-written component styling and brand design.
+   ============================================================ */
+
+:root {
+  --bb-green:    #1E4633;
+  --bb-green-2:  #2C6047;
+  --bb-marigold: #F2A93B;
+  --bb-paper:    #FBF9F3;
+  --bb-ink:      #1C1B17;
+  --bb-muted:    #6E6A61;
+  --bb-line:     #E7E2D7;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  font-weight: 600;
+  padding: .55rem 1.25rem;
+  border-radius: 999px;
+  transition: background .15s ease, color .15s ease, border-color .15s ease;
+  cursor: pointer;
+}
+.btn-brand {
+  background: var(--bb-green);
+  color: #fff;
+  border-radius: 12px;
+}
+.btn-brand:hover:not(:disabled) { background: var(--bb-green-2); }
+.btn-brand:disabled { background: #9aa89f; cursor: not-allowed; }
+
+.btn-outline {
+  border: 1px solid var(--bb-ink);
+  color: var(--bb-ink);
+  background: transparent;
+  font-weight: 500;
+}
+.btn-outline:hover { background: var(--bb-ink); color: #fff; }
+
+.btn-ghost {
+  background: rgba(30, 70, 51, .08);
+  color: var(--bb-green);
+  border-radius: 10px;
+  font-weight: 700;
+  padding: .45rem .95rem;
+}
+.btn-ghost:hover { background: var(--bb-green); color: #fff; }
+
+/* ---------- Form fields ---------- */
+.input {
+  width: 100%;
+  border: 1px solid var(--bb-line);
+  border-radius: .75rem;
+  padding: .6rem .9rem;
+  background: #fff;
+  outline: none;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.input:focus {
+  border-color: var(--bb-green-2);
+  box-shadow: 0 0 0 3px rgba(30, 70, 51, .12);
+}
+.input-error { border-color: #C0392B !important; }
+.input-error:focus { box-shadow: 0 0 0 3px rgba(192, 57, 43, .15); }
+.error-msg { color: #C0392B; font-size: .8rem; margin-top: .3rem; }
+
+/* ---------- Alerts ---------- */
+.alert { padding: .8rem 1rem; border-radius: .75rem; font-size: .92rem; }
+.alert-success { background: #E7F3EC; color: #1E4633; }
+.alert-danger  { background: #FBE9E7; color: #B3261E; }
+.alert-warning { background: #FEF3DC; color: #7A5A12; }
+
+/* ---------- Category chips ---------- */
+.chip {
+  border: 1.5px solid var(--bb-line);
+  background: #fff;
+  color: var(--bb-ink);
+  border-radius: 999px;
+  padding: .4rem 1rem;
+  font-size: .88rem;
+  font-weight: 600;
+  transition: all .15s ease;
+  cursor: pointer;
+}
+.chip:hover { border-color: var(--bb-green-2); }
+.chip.active { background: var(--bb-green); border-color: var(--bb-green); color: #fff; }
+
+/* ---------- Signature: kitchen order ticket (small badge use) ---------- */
+.ticket-tag {
+  display: inline-block;
+  font-size: .72rem;
+  letter-spacing: .12em;
+  font-weight: 700;
+  color: var(--bb-green);
+  background: rgba(242, 169, 59, .22);
+  border: 1px dashed var(--bb-marigold);
+  border-radius: 6px;
+  padding: .35rem .7rem;
+}
+
+/* ---------- Hero photo collage ---------- */
+.hero-photo {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(28, 27, 23, .18);
+}
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.hero-photo-main { aspect-ratio: 4 / 3; }
+.hero-photo-accent {
+  position: absolute;
+  width: 46%;
+  aspect-ratio: 1 / 1;
+  right: -6%;
+  bottom: -10%;
+  border: 5px solid var(--bb-paper);
+  border-radius: 16px;
+  box-shadow: 0 14px 30px rgba(28, 27, 23, .22);
+}
+
+
+/* ---------- Menu cards ---------- */
+.menu-card { transition: transform .15s ease, box-shadow .15s ease; }
+.menu-card:hover { transform: translateY(-4px); box-shadow: 0 14px 28px rgba(28, 27, 23, .10); }
+
+/* ---------- Drawer / modal / toast transitions ---------- */
+.drawer { transition: transform .25s ease; }
+.backdrop { transition: opacity .25s ease; }
+.toast-anim { transition: opacity .25s ease, transform .25s ease; }
+
+/* ---------- Login page photo panel ---------- */
+.login-hero {
+  position: relative;
+  background-image:
+    linear-gradient(180deg, rgba(20, 46, 34, .30) 0%, rgba(15, 33, 25, .85) 100%),
+    url("https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1600&q=75&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+}
+
+/* ---------- Accessibility & motion ---------- */
+:focus-visible { outline: 3px solid var(--bb-marigold); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  .menu-card, .chip, .drawer, .backdrop, .toast-anim, .btn { transition: none; }
+  .menu-card:hover { transform: none; }
+}
+
+@media (max-width: 1024px) {
+  .hero-photo-accent { display: none; }
+}
+
+/* ============================================================
+   Effects & animations ("go all out" edition)
+   ============================================================ */
+
+/* ---------- Keyframes ---------- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes popIn {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.45); }
+  100% { transform: scale(1); }
+}
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-16px); }
+}
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(.94); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes underlineGrow {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+/* ---------- Page-load entrance (hero) ---------- */
+.anim-up { animation: fadeUp .7s cubic-bezier(.22,.9,.3,1) both; }
+.anim-d1 { animation-delay: .08s; }
+.anim-d2 { animation-delay: .18s; }
+.anim-d3 { animation-delay: .28s; }
+.anim-d4 { animation-delay: .38s; }
+
+/* ---------- Scroll-reveal (menu cards & sections) ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity .6s cubic-bezier(.22,.9,.3,1), transform .6s cubic-bezier(.22,.9,.3,1);
+}
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+/* ---------- Decorative gradient glows ---------- */
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  pointer-events: none;
+  z-index: 0;
+}
+.glow-marigold { background: rgba(242, 169, 59, .28); animation: floatY 9s ease-in-out infinite; }
+.glow-green    { background: rgba(44, 96, 71, .16);  animation: floatY 11s ease-in-out infinite reverse; }
+
+/* ---------- Hero photo hover zoom ---------- */
+.hero-photo img { transition: transform .6s cubic-bezier(.22,.9,.3,1); }
+.hero-photo:hover img { transform: scale(1.06); }
+
+/* ---------- Hero title accent underline ---------- */
+.title-accent {
+  position: relative;
+  display: inline-block;
+}
+.title-accent::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: .06em;
+  height: .14em;
+  width: 100%;
+  background: var(--bb-marigold);
+  opacity: .55;
+  border-radius: 4px;
+  z-index: -1;
+  animation: underlineGrow .9s .5s cubic-bezier(.22,.9,.3,1) both;
+}
+
+/* ---------- Menu card hover (upgraded) ---------- */
+.menu-card { position: relative; }
+.menu-card:hover { transform: translateY(-6px); box-shadow: 0 18px 36px rgba(28, 27, 23, .14); }
+.menu-card .menu-emoji-icon { display: inline-block; transition: transform .35s cubic-bezier(.22,.9,.3,1); }
+.menu-card:hover .menu-emoji-icon { transform: scale(1.18) rotate(-6deg); }
+
+/* ---------- Add button success state ---------- */
+.btn-add.added {
+  background: var(--bb-green) !important;
+  color: #fff !important;
+}
+
+/* ---------- Cart badge pop ---------- */
+.badge-pop { animation: popIn .4s cubic-bezier(.22,.9,.3,1); }
+
+/* ---------- Fly-to-cart ---------- */
+.fly-item {
+  position: fixed;
+  z-index: 70;
+  font-size: 1.6rem;
+  pointer-events: none;
+  transition: transform .7s cubic-bezier(.5,-0.1,.7,.4), opacity .7s ease;
+}
+
+/* ---------- Skeleton loading ---------- */
+.skeleton-card {
+  background: #fff;
+  border: 1px solid var(--bb-line);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.skeleton-block {
+  background: linear-gradient(90deg, #f1ede3 25%, #faf7ef 50%, #f1ede3 75%);
+  background-size: 800px 100%;
+  animation: shimmer 1.2s linear infinite;
+}
+
+/* ---------- Modal entrance ---------- */
+.modal-panel-anim { animation: scaleIn .3s cubic-bezier(.22,.9,.3,1) both; }
+
+/* ---------- Chip micro-interaction ---------- */
+.chip:active { transform: scale(.94); }
+.chip { transition: all .15s ease, transform .1s ease; }
+
+/* ---------- Nav link underline effect ---------- */
+.nav-underline {
+  position: relative;
+}
+.nav-underline::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -4px;
+  height: 2px;
+  width: 0;
+  background: var(--bb-marigold);
+  border-radius: 2px;
+  transition: width .25s ease;
+}
+.nav-underline:hover::after { width: 100%; }
+
+/* ---------- Reduced motion: disable all of the above ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .anim-up, .badge-pop, .modal-panel-anim, .glow-marigold, .glow-green,
+  .title-accent::after { animation: none; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .hero-photo img, .menu-card .menu-emoji-icon, .fly-item { transition: none; }
+}

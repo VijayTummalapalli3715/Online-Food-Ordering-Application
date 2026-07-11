@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bite Bazaar · Online Food Ordering</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: "#FBF9F3", ink: "#1C1B17", muted: "#6E6A61", line: "#E7E2D7",
+            brand: { DEFAULT: "#1E4633", light: "#2C6047" }, marigold: "#F2A93B",
+          },
+          fontFamily: {
+            display: ['"Bricolage Grotesque"', "sans-serif"],
+            body: ["Inter", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="font-body bg-paper text-ink">
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="sticky top-0 z-40 bg-paper/90 backdrop-blur border-b border-line">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-2 shrink-0">
+        <span class="grid place-items-center w-9 h-9 rounded-xl bg-brand text-marigold font-display font-extrabold text-sm">BB</span>
+        <span class="font-display font-extrabold text-lg">Bite Bazaar</span>
+      </a>
+
+      <ul class="hidden md:flex items-center gap-6 mx-auto font-medium">
+        <li><a href="#menu" class="text-brand-light nav-underline">Menu</a></li>
+        <li><a href="#offers" class="hover:text-brand-light nav-underline">Offers</a></li>
+        <li><a href="about.html" class="hover:text-brand-light nav-underline">About</a></li>
+        <li><a href="contact.html" class="hover:text-brand-light nav-underline">Contact</a></li>
+      </ul>
+
+      <div class="hidden md:flex items-center gap-2 shrink-0">
+        <input id="searchInput" type="search" placeholder="Search the menu…" aria-label="Search menu"
+               class="input !rounded-full !w-48 lg:!w-56" />
+        <button type="button" id="openCartBtn" class="btn btn-outline relative" aria-label="Open cart">
+          Cart
+          <span id="cartCount" class="absolute -top-2 -right-2 bg-marigold text-ink text-xs font-bold rounded-full px-1.5 py-0.5">0</span>
+        </button>
+        <a href="login.html" class="btn btn-outline">Admin</a>
+      </div>
+
+      <!-- Mobile: cart + hamburger -->
+      <div class="flex md:hidden items-center gap-2 ml-auto">
+        <button type="button" id="openCartBtnMobile" class="btn btn-outline relative !px-3 !py-1.5 text-sm" aria-label="Open cart">
+          Cart
+          <span id="cartCountMobile" class="absolute -top-2 -right-2 bg-marigold text-ink text-xs font-bold rounded-full px-1.5 py-0.5">0</span>
+        </button>
+        <button type="button" id="menuToggle" class="btn btn-outline !px-3 !py-1.5 text-sm" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-line px-4 py-3 space-y-3">
+      <input id="searchInputMobile" type="search" placeholder="Search the menu…" aria-label="Search menu" class="input !rounded-full" />
+      <a href="#menu" class="block font-medium">Menu</a>
+      <a href="#offers" class="block font-medium">Offers</a>
+      <a href="about.html" class="block font-medium">About</a>
+      <a href="contact.html" class="block font-medium">Contact</a>
+      <a href="login.html" class="block font-medium">Admin</a>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="py-16 relative overflow-hidden" id="offers">
+    <div class="glow glow-marigold w-96 h-96 -top-24 -left-24"></div>
+    <div class="glow glow-green w-[28rem] h-[28rem] top-1/3 -right-32"></div>
+    <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-12 gap-10 items-center relative z-10">
+      <div class="lg:col-span-6">
+        <div class="ticket-tag mb-4 anim-up">TODAY'S SPECIAL · FREE DELIVERY OVER $25</div>
+        <h1 class="font-display font-extrabold leading-[1.05] text-4xl sm:text-5xl lg:text-6xl anim-up anim-d1">Good food,<br />ordered in <span class="title-accent">seconds.</span></h1>
+        <p class="text-muted max-w-xl mt-4 text-lg anim-up anim-d2">Browse the menu, build your cart, and check out — no phone calls, no waiting on hold. Fresh from our kitchen to your door.</p>
+        <div class="flex flex-wrap gap-3 mt-6 anim-up anim-d3">
+          <a href="#menu" class="btn btn-brand !px-6 !py-3 text-lg">Browse the menu</a>
+          <a href="#menu" class="btn btn-outline !px-6 !py-3 text-lg">See today's offers</a>
+        </div>
+        <div class="flex items-center gap-6 mt-8 text-sm text-muted anim-up anim-d4">
+          <span><strong class="text-ink font-display">58+</strong> dishes on the menu</span>
+          <span><strong class="text-ink font-display">30 min</strong> average delivery</span>
+          <span><strong class="text-ink font-display">4.5★</strong> average rating</span>
+        </div>
+      </div>
+      <div class="lg:col-span-6 anim-up anim-d2">
+        <div class="relative">
+          <div class="hero-photo hero-photo-main">
+            <img src="https://images.unsplash.com/photo-1603508102983-99b101395d1a?w=900&q=75&auto=format&fit=crop" alt="Fresh double cheeseburger with melted cheese and lettuce" loading="eager" />
+          </div>
+          <div class="hero-photo hero-photo-accent">
+            <img src="https://images.unsplash.com/photo-1507273026339-31b655f3752d?w=500&q=75&auto=format&fit=crop" alt="Wood-fired pizza with fresh basil and tomato" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ MENU ============ -->
+  <main class="max-w-7xl mx-auto px-4 py-12" id="menu">
+    <div class="flex flex-wrap justify-between items-end gap-4 mb-6">
+      <div>
+        <div class="text-xs tracking-[.14em] uppercase text-brand-light font-semibold">Our menu</div>
+        <h2 class="font-display font-extrabold text-3xl">Go for the hunt</h2>
+      </div>
+      <div id="categoryChips" class="flex flex-wrap gap-2" role="group" aria-label="Filter by category"></div>
+    </div>
+
+    <div id="menuStatus" class="text-muted py-3">Loading menu…</div>
+    <div id="menuGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5"></div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-[#17352a] text-[#b9c4bd] text-sm py-5 mt-8">
+    <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-between gap-2">
+      <span>© 2026 Bite Bazaar · Phase-end Project </span>
+      <span>Built with HTML · CSS · JavaScript · Tailwind CSS</span>
+    </div>
+  </footer>
+
+  <!-- ============ CART DRAWER (custom, vanilla JS) ============ -->
+  <div id="drawerBackdrop" class="backdrop fixed inset-0 bg-ink/40 z-40 opacity-0 pointer-events-none"></div>
+  <aside id="cartDrawer" class="drawer fixed top-0 right-0 h-full w-full max-w-md bg-white z-50 translate-x-full flex flex-col shadow-2xl"
+         role="dialog" aria-modal="true" aria-labelledby="cartDrawerLabel">
+    <div class="flex items-center justify-between px-5 py-4">
+      <h3 id="cartDrawerLabel" class="font-display font-bold text-xl">Your order ticket</h3>
+      <button type="button" id="closeCartBtn" class="text-2xl leading-none px-2" aria-label="Close cart">×</button>
+    </div>
+    <hr class="border-line" />
+    <div class="flex-1 overflow-y-auto px-5" id="cartItems"></div>
+    <div class="border-t border-line px-5 py-4">
+      <div class="flex justify-between"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+      <div class="flex justify-between text-muted text-sm"><span>Delivery</span><span id="cartDelivery">$3.00</span></div>
+      <hr class="border-line my-3" />
+      <div class="flex justify-between font-extrabold font-display text-lg"><span>Total</span><span id="cartTotal">$0.00</span></div>
+      <button type="button" class="btn btn-brand w-full mt-4" id="checkoutBtn" disabled>Place order</button>
+    </div>
+  </aside>
+
+  <!-- ============ CHECKOUT MODAL (custom, vanilla JS) ============ -->
+  <div id="checkoutModal" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true" aria-labelledby="checkoutModalLabel">
+    <div class="absolute inset-0 bg-ink/50" id="modalBackdrop"></div>
+    <div class="relative min-h-full flex items-center justify-center p-4">
+      <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md p-6 modal-panel-anim">
+        <div class="flex items-center justify-between mb-4">
+          <h3 id="checkoutModalLabel" class="font-display font-bold text-xl">Delivery details</h3>
+          <button type="button" id="closeModalBtn" class="text-2xl leading-none px-2" aria-label="Close">×</button>
+        </div>
+
+        <div class="space-y-4">
+          <div>
+            <label for="custName" class="block font-medium mb-1">Full name</label>
+            <input type="text" class="input" id="custName" placeholder="Your name" />
+            <p class="error-msg hidden" id="custNameError">Name must be at least 3 characters.</p>
+          </div>
+          <div>
+            <label for="custPhone" class="block font-medium mb-1">Phone</label>
+            <input type="tel" class="input" id="custPhone" placeholder="10-digit mobile number" />
+            <p class="error-msg hidden" id="custPhoneError">Enter a valid 10-digit phone number.</p>
+          </div>
+          <div>
+            <label for="custAddress" class="block font-medium mb-1">Delivery address</label>
+            <textarea class="input" id="custAddress" rows="2" placeholder="Street, area, city"></textarea>
+            <p class="error-msg hidden" id="custAddressError">Address must be at least 10 characters.</p>
+          </div>
+
+          <!-- Payment (demo) -->
+          <div class="border-t border-line pt-4">
+            <p class="font-medium mb-1">Payment</p>
+            <div class="flex items-center gap-4 bg-paper border border-line rounded-xl p-3">
+              <svg id="paymentQR" viewBox="0 0 29 29" class="w-28 h-28 shrink-0 bg-white rounded-lg p-1" role="img" aria-label="Demo payment QR code"></svg>
+              <div class="text-sm">
+                <p class="font-semibold">Scan to pay <span id="payAmount" class="text-brand">$0.00</span></p>
+                <p class="text-muted mt-1">Use any UPI / payment app.</p>
+                <p class="text-muted text-xs mt-2">Demo QR for project purposes — clicking Confirm simulates a successful payment.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-end gap-2 mt-6">
+          <button type="button" class="btn btn-outline" id="cancelModalBtn">Cancel</button>
+          <button type="button" class="btn btn-brand" id="confirmOrderBtn">Confirm order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ TOAST (custom, vanilla JS) ============ -->
+  <div id="appToast" class="toast-anim fixed bottom-4 right-4 z-[60] bg-ink text-white px-4 py-3 rounded-xl shadow-lg opacity-0 translate-y-2 pointer-events-none"
+       role="status" aria-live="polite">
+    <span id="appToastBody">Added to cart</span>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login · Bite Bazaar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: "#FBF9F3", ink: "#1C1B17", muted: "#6E6A61", line: "#E7E2D7",
+            brand: { DEFAULT: "#1E4633", light: "#2C6047" }, marigold: "#F2A93B",
+          },
+          fontFamily: {
+            display: ['"Bricolage Grotesque"', "sans-serif"],
+            body: ["Inter", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="font-body bg-paper text-ink">
+
+  <main class="grid lg:grid-cols-12 min-h-screen">
+
+    <!-- Left: form -->
+    <div class="lg:col-span-5 flex items-center justify-center p-6 md:p-12">
+      <div class="w-full max-w-md">
+        <div class="flex items-center gap-2 mb-8 anim-up">
+          <span class="grid place-items-center w-9 h-9 rounded-xl bg-brand text-marigold font-display font-extrabold text-sm">BB</span>
+          <span class="font-display font-extrabold text-lg">Bite Bazaar</span>
+        </div>
+
+        <h1 class="font-display font-extrabold text-4xl text-brand mb-1 anim-up anim-d1">Login</h1>
+        <p class="text-muted mb-6 anim-up anim-d2">Welcome back! Enter your email address and password to access the admin panel.</p>
+
+        <div id="loginAlert" class="alert hidden mb-4" role="alert"></div>
+
+        <div class="space-y-4 anim-up anim-d3">
+          <div>
+            <label for="email" class="block font-medium mb-1">Email address</label>
+            <input type="email" class="input" id="email" placeholder="admin@gmail.com" autocomplete="username" />
+            <p class="error-msg hidden" id="emailError">Enter a valid email address.</p>
+          </div>
+
+          <div>
+            <label for="password" class="block font-medium mb-1">Password</label>
+            <div class="flex gap-2">
+              <input type="password" class="input flex-1" id="password" placeholder="Minimum 8 characters" autocomplete="current-password" />
+              <button class="btn btn-outline !px-4" type="button" id="togglePassword" aria-label="Show password">Show</button>
+            </div>
+            <p class="error-msg hidden" id="passwordError"></p>
+          </div>
+
+          <div class="flex gap-2 pt-2">
+            <button type="button" class="btn btn-brand !px-6" id="loginBtn">Log in</button>
+            <button type="button" class="btn btn-outline !px-6" id="resetBtn">Reset</button>
+          </div>
+
+          <p class="text-muted text-sm pt-4">Demo credentials — email: <code class="text-pink-700">admin@gmail.com</code> · password: <code class="text-pink-700">admin@123</code></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: photo panel -->
+    <div class="hidden lg:flex lg:col-span-7 login-hero items-end">
+      <div class="p-12 text-[#f2efe6] w-full">
+        <h2 class="font-display font-bold text-3xl xl:text-4xl leading-tight max-w-xl anim-up anim-d2">Good food is made with fresh ingredients and a whole lot of heart.</h2>
+        <p class="text-[#dcd6c6] text-lg mt-4 max-w-xl">From sizzling burgers to slow-brewed masala chai — everything at Bite Bazaar is cooked the day you order it.</p>
+        <div class="flex items-center gap-6 mt-8 text-sm text-[#dcd6c6]">
+          <span><strong class="text-white font-display">58+</strong> dishes made fresh daily</span>
+          <span><strong class="text-marigold font-display">4.5★</strong> loved by our customers</span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="js/login.js"></script>
+</body>
+</html>

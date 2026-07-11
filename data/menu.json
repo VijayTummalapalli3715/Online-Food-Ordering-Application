@@ -1,0 +1,526 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Cheese Burger",
+      "category": "Burgers",
+      "price": 13,
+      "rating": 4.3,
+      "emoji": "🍔",
+      "desc": "Double cheddar, toasted brioche, house sauce."
+    },
+    {
+      "id": 2,
+      "name": "Elk Burger",
+      "category": "Burgers",
+      "price": 15,
+      "rating": 4.5,
+      "emoji": "🍔",
+      "desc": "Lean elk patty, caramelised onion, smoked mayo."
+    },
+    {
+      "id": 3,
+      "name": "Veggie Burger",
+      "category": "Burgers",
+      "price": 11,
+      "rating": 4.1,
+      "emoji": "🥬",
+      "desc": "Chickpea-beet patty, avocado, garlic aioli."
+    },
+    {
+      "id": 4,
+      "name": "Margherita Pizza",
+      "category": "Pizza",
+      "price": 14,
+      "rating": 4.6,
+      "emoji": "🍕",
+      "desc": "San Marzano tomato, fior di latte, basil."
+    },
+    {
+      "id": 5,
+      "name": "Pepperoni Pizza",
+      "category": "Pizza",
+      "price": 16,
+      "rating": 4.7,
+      "emoji": "🍕",
+      "desc": "Cup-and-char pepperoni, hot honey drizzle."
+    },
+    {
+      "id": 6,
+      "name": "Chicken Burrito",
+      "category": "Burritos",
+      "price": 12,
+      "rating": 4.2,
+      "emoji": "🌯",
+      "desc": "Grilled chicken, cilantro-lime rice, black beans."
+    },
+    {
+      "id": 7,
+      "name": "Veggie Burrito",
+      "category": "Burritos",
+      "price": 10,
+      "rating": 4.0,
+      "emoji": "🌯",
+      "desc": "Roasted peppers, corn salsa, guacamole."
+    },
+    {
+      "id": 8,
+      "name": "Chocolate Lava Cake",
+      "category": "Desserts",
+      "price": 8,
+      "rating": 4.8,
+      "emoji": "🍫",
+      "desc": "Molten centre, vanilla bean ice cream."
+    },
+    {
+      "id": 9,
+      "name": "New York Cheesecake",
+      "category": "Desserts",
+      "price": 7,
+      "rating": 4.5,
+      "emoji": "🍰",
+      "desc": "Classic baked cheesecake, berry compote."
+    },
+    {
+      "id": 10,
+      "name": "Glazed Donut Box",
+      "category": "Donuts",
+      "price": 9,
+      "rating": 4.4,
+      "emoji": "🍩",
+      "desc": "Six assorted glazed donuts, baked daily."
+    },
+    {
+      "id": 11,
+      "name": "Cold Brew Coffee",
+      "category": "Beverages",
+      "price": 5,
+      "rating": 4.3,
+      "emoji": "🥤",
+      "desc": "18-hour steep, served over ice."
+    },
+    {
+      "id": 12,
+      "name": "Mango Lassi",
+      "category": "Beverages",
+      "price": 6,
+      "rating": 4.6,
+      "emoji": "🥭",
+      "desc": "Alphonso mango, cardamom, thick yogurt."
+    },
+    {
+      "id": 13,
+      "name": "Paneer Tikka Pizza",
+      "category": "Pizza",
+      "price": 15,
+      "rating": 4.4,
+      "emoji": "🍕",
+      "desc": "Char-grilled paneer, onion, mint chutney drizzle."
+    },
+    {
+      "id": 14,
+      "name": "Crispy Chicken Wings",
+      "category": "Sides",
+      "price": 10,
+      "rating": 4.5,
+      "emoji": "🍗",
+      "desc": "Six wings tossed in smoky BBQ glaze."
+    },
+    {
+      "id": 15,
+      "name": "Loaded Fries",
+      "category": "Sides",
+      "price": 8,
+      "rating": 4.3,
+      "emoji": "🍟",
+      "desc": "Cheese sauce, jalapeños, spring onion."
+    },
+    {
+      "id": 16,
+      "name": "Garlic Breadsticks",
+      "category": "Sides",
+      "price": 6,
+      "rating": 4.2,
+      "emoji": "🥖",
+      "desc": "Herb butter, parmesan, marinara dip."
+    },
+    {
+      "id": 17,
+      "name": "Chicken Biryani Bowl",
+      "category": "Rice Bowls",
+      "price": 14,
+      "rating": 4.7,
+      "emoji": "🍛",
+      "desc": "Fragrant basmati, saffron, raita on the side."
+    },
+    {
+      "id": 18,
+      "name": "Buddha Bowl",
+      "category": "Rice Bowls",
+      "price": 12,
+      "rating": 4.1,
+      "emoji": "🥗",
+      "desc": "Quinoa, roasted veg, hummus, tahini dressing."
+    },
+    {
+      "id": 19,
+      "name": "Strawberry Shake",
+      "category": "Beverages",
+      "price": 7,
+      "rating": 4.4,
+      "emoji": "🍓",
+      "desc": "Fresh strawberries, vanilla ice cream, whipped top."
+    },
+    {
+      "id": 20,
+      "name": "Masala Chai",
+      "category": "Beverages",
+      "price": 4,
+      "rating": 4.6,
+      "emoji": "☕",
+      "desc": "Slow-brewed with ginger, cardamom, and clove."
+    },
+    {
+      "id": 21,
+      "name": "Boston Cream Donut",
+      "category": "Donuts",
+      "price": 6,
+      "rating": 4.5,
+      "emoji": "🍩",
+      "desc": "Custard-filled, dipped in dark chocolate glaze."
+    },
+    {
+      "id": 22,
+      "name": "Chocolate Sprinkle Donut",
+      "category": "Donuts",
+      "price": 5,
+      "rating": 4.3,
+      "emoji": "🍩",
+      "desc": "Yeast-raised ring, chocolate icing, rainbow sprinkles."
+    },
+    {
+      "id": 23,
+      "name": "Cinnamon Sugar Twist",
+      "category": "Donuts",
+      "price": 5,
+      "rating": 4.4,
+      "emoji": "🍩",
+      "desc": "Hand-twisted dough, buttery cinnamon-sugar coating."
+    },
+    {
+      "id": 24,
+      "name": "Tiramisu Cup",
+      "category": "Desserts",
+      "price": 8,
+      "rating": 4.7,
+      "emoji": "🍮",
+      "desc": "Espresso-soaked ladyfingers, mascarpone, cocoa dust."
+    },
+    {
+      "id": 25,
+      "name": "Brownie Sundae",
+      "category": "Desserts",
+      "price": 9,
+      "rating": 4.6,
+      "emoji": "🍨",
+      "desc": "Warm fudge brownie, vanilla scoop, hot chocolate sauce."
+    },
+    {
+      "id": 26,
+      "name": "Gulab Jamun (2 pc)",
+      "category": "Desserts",
+      "price": 6,
+      "rating": 4.8,
+      "emoji": "🍡",
+      "desc": "Soft milk-solid dumplings soaked in cardamom syrup."
+    },
+    {
+      "id": 27,
+      "name": "Egg Fried Rice Bowl",
+      "category": "Rice Bowls",
+      "price": 10,
+      "rating": 4.3,
+      "emoji": "🍚",
+      "desc": "Wok-tossed rice, scrambled egg, spring onion, soy."
+    },
+    {
+      "id": 28,
+      "name": "Paneer Tikka Rice Bowl",
+      "category": "Rice Bowls",
+      "price": 12,
+      "rating": 4.5,
+      "emoji": "🍛",
+      "desc": "Char-grilled paneer over turmeric rice, mint yogurt."
+    },
+    {
+      "id": 29,
+      "name": "BBQ Chicken Pizza",
+      "category": "Pizza",
+      "price": 17,
+      "rating": 4.6,
+      "emoji": "🍕",
+      "desc": "Smoky BBQ base, grilled chicken, red onion, cilantro."
+    },
+    {
+      "id": 30,
+      "name": "Farmhouse Pizza",
+      "category": "Pizza",
+      "price": 15,
+      "rating": 4.4,
+      "emoji": "🍕",
+      "desc": "Mushroom, capsicum, sweet corn, extra mozzarella."
+    },
+    {
+      "id": 31,
+      "name": "Four Cheese Pizza",
+      "category": "Pizza",
+      "price": 18,
+      "rating": 4.7,
+      "emoji": "🧀",
+      "desc": "Mozzarella, cheddar, parmesan, gorgonzola."
+    },
+    {
+      "id": 32,
+      "name": "Peri Peri Veggie Pizza",
+      "category": "Pizza",
+      "price": 15,
+      "rating": 4.3,
+      "emoji": "🌶️",
+      "desc": "Fiery peri peri sauce, paprika veggies, olives."
+    },
+    {
+      "id": 33,
+      "name": "Double Bacon Burger",
+      "category": "Burgers",
+      "price": 16,
+      "rating": 4.7,
+      "emoji": "🥓",
+      "desc": "Two patties, crispy bacon, smoked cheddar, BBQ mayo."
+    },
+    {
+      "id": 34,
+      "name": "Crispy Chicken Burger",
+      "category": "Burgers",
+      "price": 13,
+      "rating": 4.4,
+      "emoji": "🍗",
+      "desc": "Buttermilk-fried fillet, pickles, spicy mayo."
+    },
+    {
+      "id": 35,
+      "name": "Mushroom Swiss Burger",
+      "category": "Burgers",
+      "price": 14,
+      "rating": 4.3,
+      "emoji": "🍄",
+      "desc": "Sautéed mushrooms, melted Swiss, garlic butter bun."
+    },
+    {
+      "id": 36,
+      "name": "Peri Peri Paneer Burger",
+      "category": "Burgers",
+      "price": 12,
+      "rating": 4.2,
+      "emoji": "🧀",
+      "desc": "Grilled paneer slab, peri peri sauce, slaw."
+    },
+    {
+      "id": 37,
+      "name": "Paneer Wrap",
+      "category": "Burritos",
+      "price": 11,
+      "rating": 4.2,
+      "emoji": "🌯",
+      "desc": "Spiced paneer, crunchy slaw, mint chutney in a soft wrap."
+    },
+    {
+      "id": 38,
+      "name": "Beef Burrito",
+      "category": "Burritos",
+      "price": 14,
+      "rating": 4.5,
+      "emoji": "🌯",
+      "desc": "Slow-cooked beef, pinto beans, pico de gallo."
+    },
+    {
+      "id": 39,
+      "name": "Breakfast Burrito",
+      "category": "Burritos",
+      "price": 10,
+      "rating": 4.1,
+      "emoji": "🍳",
+      "desc": "Scrambled eggs, hash browns, cheese, salsa roja."
+    },
+    {
+      "id": 40,
+      "name": "Onion Rings",
+      "category": "Sides",
+      "price": 6,
+      "rating": 4.1,
+      "emoji": "🧅",
+      "desc": "Beer-battered rings, served with chipotle dip."
+    },
+    {
+      "id": 41,
+      "name": "Mozzarella Sticks",
+      "category": "Sides",
+      "price": 8,
+      "rating": 4.4,
+      "emoji": "🧀",
+      "desc": "Golden-fried, gooey centre, marinara dip."
+    },
+    {
+      "id": 42,
+      "name": "Peri Peri Fries",
+      "category": "Sides",
+      "price": 7,
+      "rating": 4.3,
+      "emoji": "🍟",
+      "desc": "Shoestring fries dusted with peri peri masala."
+    },
+    {
+      "id": 43,
+      "name": "Coleslaw Cup",
+      "category": "Sides",
+      "price": 4,
+      "rating": 4.0,
+      "emoji": "🥗",
+      "desc": "Creamy cabbage-carrot slaw, house dressing."
+    },
+    {
+      "id": 44,
+      "name": "Veg Manchurian Bowl",
+      "category": "Rice Bowls",
+      "price": 11,
+      "rating": 4.3,
+      "emoji": "🍚",
+      "desc": "Crispy veg balls in tangy sauce over fried rice."
+    },
+    {
+      "id": 45,
+      "name": "Teriyaki Chicken Bowl",
+      "category": "Rice Bowls",
+      "price": 13,
+      "rating": 4.6,
+      "emoji": "🍱",
+      "desc": "Glazed chicken, steamed rice, sesame, scallions."
+    },
+    {
+      "id": 46,
+      "name": "Rajma Chawal Bowl",
+      "category": "Rice Bowls",
+      "price": 10,
+      "rating": 4.4,
+      "emoji": "🍛",
+      "desc": "Slow-simmered kidney beans over jeera rice."
+    },
+    {
+      "id": 47,
+      "name": "Schezwan Fried Rice Bowl",
+      "category": "Rice Bowls",
+      "price": 11,
+      "rating": 4.2,
+      "emoji": "🍚",
+      "desc": "Spicy Schezwan rice with crunchy vegetables."
+    },
+    {
+      "id": 48,
+      "name": "Mango Cheesecake Jar",
+      "category": "Desserts",
+      "price": 8,
+      "rating": 4.6,
+      "emoji": "🥭",
+      "desc": "Layered mango purée, cream cheese, biscuit crumble."
+    },
+    {
+      "id": 49,
+      "name": "Ice Cream Sandwich",
+      "category": "Desserts",
+      "price": 6,
+      "rating": 4.3,
+      "emoji": "🍦",
+      "desc": "Vanilla scoop pressed between chocolate cookies."
+    },
+    {
+      "id": 50,
+      "name": "Rasmalai (2 pc)",
+      "category": "Desserts",
+      "price": 7,
+      "rating": 4.7,
+      "emoji": "🥛",
+      "desc": "Soft cheese discs in saffron-cardamom milk."
+    },
+    {
+      "id": 51,
+      "name": "Apple Pie Slice",
+      "category": "Desserts",
+      "price": 7,
+      "rating": 4.4,
+      "emoji": "🥧",
+      "desc": "Cinnamon apples, flaky crust, served warm."
+    },
+    {
+      "id": 52,
+      "name": "Red Velvet Donut",
+      "category": "Donuts",
+      "price": 6,
+      "rating": 4.5,
+      "emoji": "🍩",
+      "desc": "Cream-cheese glaze over a soft red velvet ring."
+    },
+    {
+      "id": 53,
+      "name": "Nutella-Filled Donut",
+      "category": "Donuts",
+      "price": 6,
+      "rating": 4.8,
+      "emoji": "🍫",
+      "desc": "Pillowy donut piped full of hazelnut spread."
+    },
+    {
+      "id": 54,
+      "name": "Maple Glazed Donut",
+      "category": "Donuts",
+      "price": 5,
+      "rating": 4.3,
+      "emoji": "🍁",
+      "desc": "Classic ring dipped in real maple glaze."
+    },
+    {
+      "id": 55,
+      "name": "Fresh Lime Soda",
+      "category": "Beverages",
+      "price": 4,
+      "rating": 4.2,
+      "emoji": "🍋",
+      "desc": "Sweet-and-salty sparkling lime, made to order."
+    },
+    {
+      "id": 56,
+      "name": "Oreo Milkshake",
+      "category": "Beverages",
+      "price": 7,
+      "rating": 4.6,
+      "emoji": "🥤",
+      "desc": "Blended Oreos, vanilla ice cream, chocolate drizzle."
+    },
+    {
+      "id": 57,
+      "name": "Watermelon Cooler",
+      "category": "Beverages",
+      "price": 5,
+      "rating": 4.1,
+      "emoji": "🍉",
+      "desc": "Chilled watermelon juice, hint of mint."
+    },
+    {
+      "id": 58,
+      "name": "Filter Coffee",
+      "category": "Beverages",
+      "price": 4,
+      "rating": 4.5,
+      "emoji": "☕",
+      "desc": "Strong South Indian filter brew with frothy milk."
+    }
+  ]
+}

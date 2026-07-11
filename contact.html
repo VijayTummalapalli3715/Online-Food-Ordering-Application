@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us · Bite Bazaar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: "#FBF9F3", ink: "#1C1B17", muted: "#6E6A61", line: "#E7E2D7",
+            brand: { DEFAULT: "#1E4633", light: "#2C6047" }, marigold: "#F2A93B",
+          },
+          fontFamily: {
+            display: ['"Bricolage Grotesque"', "sans-serif"],
+            body: ["Inter", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="font-body bg-paper text-ink">
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="sticky top-0 z-40 bg-paper/90 backdrop-blur border-b border-line">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-2 shrink-0">
+        <span class="grid place-items-center w-9 h-9 rounded-xl bg-brand text-marigold font-display font-extrabold text-sm">BB</span>
+        <span class="font-display font-extrabold text-lg">Bite Bazaar</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-6 mx-auto font-medium">
+        <li><a href="index.html#menu" class="hover:text-brand-light nav-underline">Menu</a></li>
+        <li><a href="index.html#offers" class="hover:text-brand-light nav-underline">Offers</a></li>
+        <li><a href="about.html" class="hover:text-brand-light nav-underline">About</a></li>
+        <li><a href="contact.html" class="text-brand-light">Contact</a></li>
+      </ul>
+      <div class="hidden md:flex items-center gap-2 shrink-0">
+        <a href="index.html#menu" class="btn btn-outline">Order now</a>
+        <a href="login.html" class="btn btn-outline">Admin</a>
+      </div>
+      <button type="button" id="menuToggle" class="btn btn-outline !px-3 !py-1.5 text-sm md:hidden ml-auto" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden border-t border-line px-4 py-3 space-y-3">
+      <a href="index.html#menu" class="block font-medium">Menu</a>
+      <a href="index.html#offers" class="block font-medium">Offers</a>
+      <a href="about.html" class="block font-medium">About</a>
+      <a href="contact.html" class="block font-medium text-brand-light">Contact</a>
+      <a href="login.html" class="block font-medium">Admin</a>
+    </div>
+  </nav>
+
+  <!-- ============ PAGE HEADER ============ -->
+  <header class="py-14">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="ticket-tag mb-4">WE'RE LISTENING</div>
+      <h1 class="font-display font-extrabold text-4xl sm:text-5xl">Contact us</h1>
+      <p class="text-muted max-w-xl mt-3 text-lg">A question about an order, feedback on a dish, or a catering enquiry — drop us a message and we'll get back within a day.</p>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 pb-14">
+    <div class="grid lg:grid-cols-12 gap-6">
+
+      <!-- Contact form -->
+      <div class="lg:col-span-7">
+        <div class="bg-white border border-line rounded-2xl p-6 md:p-10">
+          <h2 class="font-display font-extrabold text-2xl mb-6">Send a message</h2>
+          <div id="contactAlert" class="alert alert-success hidden mb-4" role="alert">
+            Thanks! Your message has been sent. We'll reply within 24 hours.
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="ctName" class="block font-medium mb-1">Full name</label>
+              <input type="text" class="input" id="ctName" placeholder="Your name" />
+              <p class="error-msg hidden" id="ctNameError">Name must be at least 3 characters.</p>
+            </div>
+            <div>
+              <label for="ctEmail" class="block font-medium mb-1">Email address</label>
+              <input type="email" class="input" id="ctEmail" placeholder="you@example.com" />
+              <p class="error-msg hidden" id="ctEmailError">Enter a valid email address.</p>
+            </div>
+            <div>
+              <label for="ctPhone" class="block font-medium mb-1">Phone <span class="text-muted">(optional)</span></label>
+              <input type="tel" class="input" id="ctPhone" placeholder="10-digit mobile number" />
+              <p class="error-msg hidden" id="ctPhoneError">If provided, phone must be 10 digits.</p>
+            </div>
+            <div>
+              <label for="ctTopic" class="block font-medium mb-1">Topic</label>
+              <select class="input" id="ctTopic">
+                <option value="">Choose a topic…</option>
+                <option>Order issue</option>
+                <option>Feedback</option>
+                <option>Catering enquiry</option>
+                <option>Other</option>
+              </select>
+              <p class="error-msg hidden" id="ctTopicError">Please choose a topic.</p>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="ctMessage" class="block font-medium mb-1">Message</label>
+              <textarea class="input" id="ctMessage" rows="4" placeholder="Tell us what's on your mind (at least 15 characters)"></textarea>
+              <p class="error-msg hidden" id="ctMessageError">Message must be at least 15 characters.</p>
+            </div>
+            <div class="sm:col-span-2">
+              <button type="button" class="btn btn-brand !px-6" id="ctSendBtn">Send message</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact info -->
+      <div class="lg:col-span-5 flex flex-col gap-6">
+        <div class="bg-white border border-line rounded-2xl p-6">
+          <h3 class="font-bold text-brand mb-2">Reach us directly</h3>
+          <p class="mb-1">📧 hello@bitebazaar.example</p>
+          <p class="mb-1">📞 +1 (857) 398-1052</p>
+          <p>📍 25 S Point Dr, Boston, MA 02105</p>
+        </div>
+        <div class="bg-white border border-line rounded-2xl p-6">
+          <h3 class="font-bold text-brand mb-2">Hours</h3>
+          <p>Mon-Fri -- 11:00 - 22:00<br />Sat-Sun -- 10:00 - 23:00</p>
+        </div>
+        <div class="bg-white border border-line rounded-2xl p-6">
+          <h3 class="font-bold text-brand mb-2">Order support</h3>
+          <p>Already placed an order? Keep your order ID (e.g. <code class="text-pink-700">BB-4821</code>) handy — it helps us find your ticket faster.</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-[#17352a] text-[#b9c4bd] text-sm py-5">
+    <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-between gap-2">
+      <span>© 2026 Bite Bazaar · Phase-end Project </span>
+      <span>Built with HTML · CSS · JavaScript · Tailwind CSS</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("menuToggle").addEventListener("click", function () {
+      const m = document.getElementById("mobileMenu");
+      const open = m.classList.toggle("hidden") === false;
+      this.setAttribute("aria-expanded", String(open));
+    });
+  </script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

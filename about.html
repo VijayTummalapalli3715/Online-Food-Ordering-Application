@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us · Bite Bazaar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: "#FBF9F3", ink: "#1C1B17", muted: "#6E6A61", line: "#E7E2D7",
+            brand: { DEFAULT: "#1E4633", light: "#2C6047" }, marigold: "#F2A93B",
+          },
+          fontFamily: {
+            display: ['"Bricolage Grotesque"', "sans-serif"],
+            body: ["Inter", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="font-body bg-paper text-ink">
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="sticky top-0 z-40 bg-paper/90 backdrop-blur border-b border-line">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-2 shrink-0">
+        <span class="grid place-items-center w-9 h-9 rounded-xl bg-brand text-marigold font-display font-extrabold text-sm">BB</span>
+        <span class="font-display font-extrabold text-lg">Bite Bazaar</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-6 mx-auto font-medium">
+        <li><a href="index.html#menu" class="hover:text-brand-light nav-underline">Menu</a></li>
+        <li><a href="index.html#offers" class="hover:text-brand-light nav-underline">Offers</a></li>
+        <li><a href="about.html" class="text-brand-light">About</a></li>
+        <li><a href="contact.html" class="hover:text-brand-light nav-underline">Contact</a></li>
+      </ul>
+      <div class="hidden md:flex items-center gap-2 shrink-0">
+        <a href="index.html#menu" class="btn btn-outline">Order now</a>
+        <a href="login.html" class="btn btn-outline">Admin</a>
+      </div>
+      <button type="button" id="menuToggle" class="btn btn-outline !px-3 !py-1.5 text-sm md:hidden ml-auto" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden border-t border-line px-4 py-3 space-y-3">
+      <a href="index.html#menu" class="block font-medium">Menu</a>
+      <a href="index.html#offers" class="block font-medium">Offers</a>
+      <a href="about.html" class="block font-medium text-brand-light">About</a>
+      <a href="contact.html" class="block font-medium">Contact</a>
+      <a href="login.html" class="block font-medium">Admin</a>
+    </div>
+  </nav>
+
+  <!-- ============ PAGE HEADER ============ -->
+  <header class="py-14">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="ticket-tag mb-4">OUR STORY</div>
+      <h1 class="font-display font-extrabold text-4xl sm:text-5xl">About Bite Bazaar</h1>
+      <p class="text-muted max-w-xl mt-3 text-lg">A neighbourhood kitchen with a simple idea: honest food, made fresh, delivered fast.</p>
+    </div>
+  </header>
+
+  <!-- ============ STORY ============ -->
+  <main class="max-w-7xl mx-auto px-4 pb-14">
+    <div class="grid lg:grid-cols-12 gap-6">
+      <div class="lg:col-span-7">
+        <div class="bg-white border border-line rounded-2xl p-6 md:p-10 h-full">
+          <h2 class="font-display font-extrabold text-2xl mb-4">From a food cart to your doorstep</h2>
+          <p class="mb-4">Bite Bazaar started in 2019 as a single food cart serving burgers and cold brew outside a college campus. The queue kept growing, so we did too — first a small kitchen, then a full menu spanning pizzas, burritos, bowls, and desserts.</p>
+          <p class="mb-4">Going online was the natural next step. Manual phone orders meant mistakes, missed calls, and long waits. This app fixes that: you browse the full menu, build your cart, and check out in seconds — and our kitchen gets your order exactly as you placed it.</p>
+          <p>Everything is prepared to order. No heat lamps, no shortcuts.</p>
+        </div>
+      </div>
+      <div class="lg:col-span-5 flex flex-col gap-6">
+        <div class="bg-white border border-line rounded-2xl p-6">
+          <h3 class="font-bold text-brand mb-2">Why order online with us</h3>
+          <ul class="list-disc ps-5 space-y-2">
+            <li>Real-time cart — see your total update as you build your order</li>
+            <li>Accurate orders — what you tap is what the kitchen sees</li>
+            <li>Contactless — order and pay from any device</li>
+          </ul>
+        </div>
+        <div class="bg-white border border-line rounded-2xl p-6">
+          <h3 class="font-bold text-brand mb-2">Hours</h3>
+          <p>Mon–Fri · 11:00 – 22:00<br />Sat–Sun · 10:00 – 23:00</p>
+        </div>
+        <div class="bg-white border border-line rounded-2xl p-6">
+          <h3 class="font-bold text-brand mb-2">By the numbers</h3>
+          <p>58+ dishes across 8 categories · 4.5★ average rating · 30-minute average delivery</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-10">
+      <a href="index.html#menu" class="btn btn-brand !px-6 !py-3 text-lg">Browse the menu</a>
+    </div>
+  </main>
+
+  <footer class="bg-[#17352a] text-[#b9c4bd] text-sm py-5">
+    <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-between gap-2">
+      <span>© 2026 Bite Bazaar · Phase-end Project </span>
+      <span>Built with HTML · CSS · JavaScript · Tailwind CSS</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("menuToggle").addEventListener("click", function () {
+      const m = document.getElementById("mobileMenu");
+      const open = m.classList.toggle("hidden") === false;
+      this.setAttribute("aria-expanded", String(open));
+    });
+  </script>
+</body>
+</html>
