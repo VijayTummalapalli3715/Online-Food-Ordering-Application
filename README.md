@@ -4,8 +4,6 @@ Phase-end Project  · Full Stack Development Program
 
 A responsive online food ordering frontend built with **HTML, CSS, JavaScript, and Tailwind CSS**. Users can browse the menu, search and filter by category, manage a real-time cart, and place orders. An admin login page validates credentials before granting access.
 
-# Bite Bazaar — Online Food Ordering Application
-
 🔗 **Live Demo:** [bite-bazaar-alpha.vercel.app](https://bite-bazaar-alpha.vercel.app/)
 
 
